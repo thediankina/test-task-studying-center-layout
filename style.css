@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    background-color: #FFFFFF;
+}
+
+/* welcome section */
+.background {
+    position: absolute;
+    width: 1920px;
+    height: 687px;
+    left: 0px;
+    top: 0px;
+
+    background: #DC911B;
+    opacity: 0.3;
+}
+
+.layer {
+    position: absolute;
+    width: 1920px;
+    height: 687px;
+    left: 0px;
+    top: 0px;    
+
+    background: #DC911B;
+    mix-blend-mode: color;
+}
+
+.workers {
+    position: absolute;
+    width: 974px;
+    height: 606px;
+    left: 755px;
+    top: 81px;
+
+    background: url(assets/workers.png);
+    mix-blend-mode: multiply;
+}
+
+.slogan {
+    position: absolute;
+    width: 448px;
+    height: 144px;
+    left: 360px;
+    top: 284px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+
+    text-transform: uppercase;
+
+    color: #3E3E3D;
+}
