@@ -4,9 +4,21 @@ body {
     background-color: #FFFFFF;
 }
 
-/* welcome section */
-#welcome .background {
+header {
+    z-index: 0;
+}
+
+header > div {
     position: absolute;
+}
+
+/* about section */
+#about > div {
+    position: absolute;
+    z-index: -1;
+}
+
+#about > .background {
     width: 1920px;
     height: 687px;
     left: 0px;
@@ -16,19 +28,7 @@ body {
     opacity: 0.3;
 }
 
-#welcome .layer {
-    position: absolute;
-    width: 1920px;
-    height: 687px;
-    left: 0px;
-    top: 0px;    
-
-    background: #DC911B;
-    mix-blend-mode: color;
-}
-
-#welcome .image {
-    position: absolute;
+#about > .image {
     width: 974px;
     height: 606px;
     left: 755px;
@@ -38,8 +38,17 @@ body {
     mix-blend-mode: multiply;
 }
 
+#about > .filter {
+    width: 1920px;
+    height: 687px;
+    left: 0px;
+    top: 0px;
+
+    background: #DC911B;
+    mix-blend-mode: color;
+}
+
 .slogan {
-    position: absolute;
     width: 448px;
     height: 144px;
     left: 360px;
@@ -57,7 +66,6 @@ body {
 
 /* header section */
 .logo {
-    position: absolute;
     width: 192px;
     height: 75px;
     left: 360px;
@@ -67,7 +75,6 @@ body {
 }
 
 .navbar {
-    position: absolute;
     width: 685px;
     height: 21px;
     left: 617px;
@@ -77,7 +84,7 @@ body {
     justify-content: space-between;
 }
 
-.navbar a {
+.navbar > a {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -89,7 +96,6 @@ body {
 }
 
 .phone {
-    position: absolute;
     width: 191px;
     height: 42px;
     left: 1369px;
@@ -105,18 +111,18 @@ body {
     grid-column-gap: 0.5vw;
 }
 
-.phone div {
+.phone > div {
     margin: auto;
 }
 
-.phone .icon {
+.phone > .icon {
     width: 14px;
     height: 14px;
 
     background: url(assets/phone.svg);
 }
 
-.phone .number {
+.phone > .number {
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -124,7 +130,7 @@ body {
     color: #2D2D2D;
 }
 
-.phone #more {
+.phone > #more {
     width: 12px;
     height: 7px;
 
@@ -132,11 +138,11 @@ body {
     background: url(assets/wrap.svg);
 }
 
-.phone #more:hover {
+.phone > #more:hover {
     background: url(assets/unwrap.svg);
 }
 
-.phone .order {
+.phone > .order {
     grid-area: order;
     margin-right: 0;
     font-weight: 400;
