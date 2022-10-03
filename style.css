@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@700&display=swap');
 
 body {
     background-color: #FFFFFF;
 }
 
 /* welcome section */
-.background {
+#welcome .background {
     position: absolute;
     width: 1920px;
     height: 687px;
@@ -16,7 +16,7 @@ body {
     opacity: 0.3;
 }
 
-.layer {
+#welcome .layer {
     position: absolute;
     width: 1920px;
     height: 687px;
@@ -27,7 +27,7 @@ body {
     mix-blend-mode: color;
 }
 
-.workers {
+#welcome .image {
     position: absolute;
     width: 974px;
     height: 606px;
@@ -45,13 +45,104 @@ body {
     left: 360px;
     top: 284px;
 
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 150%;
 
     text-transform: uppercase;
-
     color: #3E3E3D;
+}
+
+/* header section */
+.logo {
+    position: absolute;
+    width: 192px;
+    height: 75px;
+    left: 360px;
+    top: 17px;
+
+    background: url(assets/logo.svg);
+}
+
+.navbar {
+    position: absolute;
+    width: 685px;
+    height: 21px;
+    left: 617px;
+    top: 44px;
+
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+.phone {
+    position: absolute;
+    width: 191px;
+    height: 42px;
+    left: 1369px;
+    top: 35px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+
+    display: grid;
+    grid-template-areas:"icon number more" ". order .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
+    grid-column-gap: 0.5vw;
+}
+
+.phone div {
+    margin: auto;
+}
+
+.phone .icon {
+    width: 14px;
+    height: 14px;
+
+    background: url(assets/phone.svg);
+}
+
+.phone .number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #2D2D2D;
+}
+
+.phone #more {
+    width: 12px;
+    height: 7px;
+
+    cursor: pointer;
+    background: url(assets/wrap.svg);
+}
+
+.phone #more:hover {
+    background: url(assets/unwrap.svg);
+}
+
+.phone .order {
+    grid-area: order;
+    margin-right: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #2D2D2D;
+    border-bottom: 1px dashed #2D2D2D;
 }
