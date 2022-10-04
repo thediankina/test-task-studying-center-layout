@@ -1,70 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 body {
     background-color: #FFFFFF;
 }
 
+button {
+    width: 166px;
+    height: 39px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 11px 26px;
+    gap: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #000000;
+
+    cursor: pointer;
+    background: none;
+    border: 1px solid #DC911B;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #FFFFFF;
+    background: #DC911B;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+
+    text-transform: uppercase;
+}
+
+/* header section */
 header {
-    z-index: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
 }
 
 header > div {
     position: absolute;
 }
 
-/* about section */
-#about > div {
-    position: absolute;
-    z-index: -1;
-}
-
-#about > .background {
-    width: 1920px;
-    height: 687px;
-    left: 0px;
-    top: 0px;
-
-    background: #DC911B;
-    opacity: 0.3;
-}
-
-#about > .image {
-    width: 974px;
-    height: 606px;
-    left: 755px;
-    top: 81px;
-
-    background: url(assets/workers.png);
-    mix-blend-mode: multiply;
-}
-
-#about > .filter {
-    width: 1920px;
-    height: 687px;
-    left: 0px;
-    top: 0px;
-
-    background: #DC911B;
-    mix-blend-mode: color;
-}
-
-.slogan {
-    width: 448px;
-    height: 144px;
-    left: 360px;
-    top: 284px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 150%;
-
-    text-transform: uppercase;
-    color: #3E3E3D;
-}
-
-/* header section */
 .logo {
     width: 192px;
     height: 75px;
@@ -105,7 +96,6 @@ header > div {
     font-style: normal;
 
     display: grid;
-    grid-template-areas:"icon number more" ". order .";
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr;
     grid-column-gap: 0.5vw;
@@ -142,8 +132,9 @@ header > div {
     background: url(assets/unwrap.svg);
 }
 
-.phone > .order {
-    grid-area: order;
+.phone > #order {
+    grid-row: 2;
+    grid-column: 2;
     margin-right: 0;
     font-weight: 400;
     font-size: 12px;
@@ -151,4 +142,121 @@ header > div {
 
     color: #2D2D2D;
     border-bottom: 1px dashed #2D2D2D;
+}
+
+/* about section */
+#about {
+    position: absolute;
+    width: 100%;
+    height: 687px;
+    left: 0;
+    top: 0;
+}
+
+#about > div {
+    position: absolute;
+    z-index: 0;
+}
+
+#about > .background {
+    width: inherit;
+    height: inherit;
+
+    background: #DC911B;
+    opacity: 0.3;
+}
+
+#about > .image {
+    width: 974px;
+    height: 606px;
+    left: 755px;
+    top: 81px;
+
+    background: url(assets/banner.png);
+    mix-blend-mode: multiply;
+}
+
+#about > .filter {
+    width: inherit;
+    height: inherit;
+
+    background: #DC911B;
+    mix-blend-mode: color;
+}
+
+.banner {
+    width: 448px;
+    height: 144px;
+    left: 360px;
+    top: 284px;
+
+    font-size: 32px;
+    line-height: 150%;
+
+    color: #3E3E3D;
+}
+
+/* services section */
+#services {
+    position: absolute;
+    width: 100%;
+    height: 1975px;
+    left: 0;
+    top: 687px;
+}
+
+#services > div {
+    position: absolute;
+}
+
+#services > .title {
+    width: 259px;
+    height: 43px;
+    left: 831px;
+    top: 100px;
+
+    color: #000000;
+}
+
+#services > .list {
+    width: 975px;
+    height: 1756px;
+    top: 273px;
+
+    padding: 75px 462px 219px 483px;
+    background: url(assets/services.svg) no-repeat;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 212px);
+    grid-row-gap: 200px;
+}
+
+.service {
+    width: 575px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 32px;
+}
+
+.service > .title {
+    font-size: 24px;
+    color: #000000;
+}
+
+.service > .description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #000000;
+}
+
+.service:nth-child(2n+1) {
+    margin-left: auto;
+    margin-right: 0;
 }
