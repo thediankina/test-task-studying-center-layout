@@ -1,37 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
+/* general styles */
 body {
     background-color: #FFFFFF;
-}
-
-button {
-    width: 166px;
-    height: 39px;
-
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 11px 26px;
-    gap: 10px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    color: #000000;
-
-    cursor: pointer;
-    background: none;
-    border: 1px solid #DC911B;
-    border-radius: 5px;
-}
-
-button:hover {
-    color: #FFFFFF;
-    background: #DC911B;
 }
 
 .title {
@@ -65,7 +36,7 @@ header > div {
     background: url(assets/logo.svg);
 }
 
-.navbar {
+header > .navbar {
     width: 685px;
     height: 21px;
     left: 617px;
@@ -75,7 +46,7 @@ header > div {
     justify-content: space-between;
 }
 
-.navbar > a {
+header > .navbar > a {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -218,7 +189,7 @@ header > div {
     color: #000000;
 }
 
-#services > .list {
+#services > .container {
     width: 975px;
     height: 1462px;
     top: 273px;
@@ -256,10 +227,136 @@ header > div {
     color: #000000;
 }
 
+.service > .more {
+    width: 166px;
+    height: 39px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 11px 26px;
+    gap: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #000000;
+    text-transform: lowercase;
+
+    cursor: pointer;
+    background: none;
+    border: 1px solid #DC911B;
+    border-radius: 5px;
+}
+
+.service > .more:hover {
+    color: #FFFFFF;
+    background: #DC911B;
+}
+
 .service:nth-child(2n+1) {
     margin-left: auto;
 }
 
 .service > .more {
     margin-left: auto;
+}
+
+/* reviews services */
+#reviews {
+    position: absolute;
+    width: 100%;
+    height: 758px;
+    top: 2741px;
+
+    background: #3E3E3D;
+}
+
+#reviews > div {
+    position: absolute;
+}
+
+#reviews > .title {
+    width: 352px;
+    height: 43px;
+    left: 564px;
+    top: 125px;
+
+    color: #FFFFFF;
+}
+
+#reviews > .image {
+    width: 577px;
+    height: 535px;
+    left: 1053px;
+    top: 82px;
+
+    background: url(assets/reviews.svg);
+}
+
+#reviews > .container {
+    width: 820px;
+    height: 416px;
+    left: 276px;
+    top: 274px;
+}
+
+#reviews .slider {
+    position: absolute;
+    width: inherit;
+    height: 338px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.review {
+    width: 240px;
+    height: inherit;
+
+    background: url(assets/review.png) no-repeat;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 378px;
+
+    display: inline-flex;
+    justify-content: center;
+}
+
+.navbar > button {
+    padding: 9px 14px 8px 13px;
+
+    cursor: pointer;
+    background: #DC911B;
+    border: none;
+}
+
+.navbar > button:disabled {
+    background-color: #C4C4C4;
+}
+
+#reviews .more {
+    position: absolute;
+    width: 132px;
+    height: 22px;
+    right: 24px;
+    bottom: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #FFFFFF;
 }
