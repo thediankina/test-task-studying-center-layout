@@ -499,3 +499,42 @@ header > .navbar > a {
     background: none;
     border: none;
 }
+
+/* clients section */
+#clients {
+    position: absolute;
+    width: 100%;
+    height: 613px;
+    left: 0;
+    top: 6825px;
+
+    display: inline-flex;
+    justify-content: center;
+}
+
+#clients > div {
+    position: absolute;
+}
+
+#clients > .title {
+    left: 565px;
+    top: 57px;
+}
+
+#clients > .container {
+    width: 1200px;
+    height: 360px;
+    top: 160px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#clients img {
+    width: 220px;
+    height: 60px;
+    padding: 60px 40px;
+
+    border: 1px solid #F2F2F2;
+}
