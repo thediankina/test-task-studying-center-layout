@@ -277,7 +277,7 @@ header > .navbar > a {
     margin-left: auto;
 }
 
-/* reviews services */
+/* reviews & documents section */
 #reviews {
     position: absolute;
     width: 100%;
@@ -288,11 +288,23 @@ header > .navbar > a {
     background: #3E3E3D;
 }
 
-#reviews > div {
+#documents {
+    position: absolute;
+    width: 100%;
+    height: 758px;
+    left: 0;
+    top: 6068px;
+
+    background: #3E3E3D;
+}
+
+#reviews > div,
+#documents > div {
     position: absolute;
 }
 
-#reviews > .title {
+#reviews > .title,
+#documents > .title {
     width: 352px;
     height: 43px;
     left: 564px;
@@ -307,17 +319,27 @@ header > .navbar > a {
     left: 1053px;
     top: 82px;
 
-    background: url(assets/reviews.svg);
+    background: url(assets/reviews.svg) no-repeat;
 }
 
-#reviews > .container {
+#documents > .image {
+    width: 486px;
+    height: 500px;
+    left: 1191px;
+    top: 117px;
+
+    background: url(assets/documents.svg) no-repeat;
+}
+
+#reviews > .container,
+#documents > .container {
     width: 820px;
     height: 416px;
     left: 276px;
     top: 274px;
 }
 
-#reviews .slider {
+.slider {
     position: absolute;
     width: inherit;
     height: 338px;
@@ -326,7 +348,7 @@ header > .navbar > a {
     justify-content: space-between;
 }
 
-.review {
+.review, .document {
     width: 240px;
     height: inherit;
 
@@ -354,7 +376,8 @@ header > .navbar > a {
     background-color: #C4C4C4;
 }
 
-#reviews .more {
+#reviews .more,
+#documents .more {
     position: absolute;
     width: 132px;
     height: 22px;
