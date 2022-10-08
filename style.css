@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Scada&display=swap');
 
 /* general styles */
 body {
@@ -253,10 +253,8 @@ header > .navbar > a {
     color: #000000;
 }
 
-.service > .more {
-    width: 166px;
-    height: 39px;
-
+.service > .more,
+#contacts .more {
     box-sizing: border-box;
 
     display: flex;
@@ -279,7 +277,8 @@ header > .navbar > a {
     border-radius: 5px;
 }
 
-.service > .more:hover {
+.service > .more:hover,
+#contacts .more:hover {
     color: #FFFFFF;
     background: #DC911B;
 }
@@ -577,10 +576,95 @@ header > .navbar > a {
 #news .more {
     position: absolute;
     right: 8.2%;
-    bottom: 0;
+    bottom: 12%;
     margin-top: 66px;
 
     display: inline-flex;
+}
+
+/* contacts section */
+#contacts {
+    position: absolute;
+    width: 100%;
+    height: 540px;
+    left: 0;
+    top: 5110px;
+}
+
+#contacts > div {
+    position: absolute;
+}
+
+#contacts > .background {
+    width: 1920px;
+    height: 312px;
+    top: 133px;
+    padding: 40px 0;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url(assets/contacts.svg) no-repeat;
+}
+
+#contacts .container {
+    width: 617px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacts .title {
+    font-size: 24px;
+    margin: 8px;
+}
+
+#contacts .description {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+#contacts #request-form {
+    margin-top: 35px;
+}
+
+#contacts #request-form input {
+    margin-bottom: 35px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+    background: none;
+    border: unset;
+    border-bottom: 1px solid #3E3E3D;
+    outline: 0;
+}
+
+#contacts #request-form input:focus {
+    border-bottom: 1px solid #DC911B;
+}
+
+
+#contacts #request-form input::placeholder {
+    font-family: 'Scada', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+
+    opacity: 0.8;
+
+    color: #3E3E3D;
+}
+
+#contacts #request-form #phone {
+    margin-left: 55px;
+}
+
+#contacts #request-form .more {
+    margin: auto;
 }
 
 /* clients section */

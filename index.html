@@ -186,6 +186,20 @@
             </div>
         </div>
     </div>
+    <div id="contacts">
+        <div class="background">
+            <div class="container">
+                <div class="title">Вопросы?</div>
+                <div class="description">Оставьте заявку и мы с Вами свяжемся</div>
+                <form id="request-form" action="request/create" method="post">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <input type="tel" name="phone" id="phone"
+                    pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="+7 (123) 456 78 89">
+                    <button type="submit" class="more">оставить&nbsp;заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <div id="documents">
         <div class="title">Сертификаты</div>
         <div class="image"></div>
