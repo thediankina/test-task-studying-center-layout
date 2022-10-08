@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Scada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&family=Scada&display=swap');
 
 /* general styles */
 body {
@@ -307,7 +307,7 @@ header > .navbar > a {
     width: 100%;
     height: 758px;
     left: 0;
-    top: 6068px;
+    top: 6150px;
 
     background: #3E3E3D;
 }
@@ -489,7 +489,7 @@ header > .navbar > a {
 
 #actions .more {
     position: absolute;
-    right: 0;
+    right: -5px;
     margin-top: 92px;
 }
 
@@ -577,7 +577,6 @@ header > .navbar > a {
     position: absolute;
     right: 8.2%;
     bottom: 12%;
-    margin-top: 66px;
 
     display: inline-flex;
 }
@@ -649,7 +648,6 @@ header > .navbar > a {
 
 #contacts #request-form input::placeholder {
     font-family: 'Scada', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;
@@ -667,13 +665,99 @@ header > .navbar > a {
     margin: auto;
 }
 
+/* articles section */
+#articles {
+    position: absolute;
+    width: 100%;
+    height: 487px;
+    left: 0;
+    top: 5650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#articles > div {
+    position: absolute;
+}
+
+#articles > .title {
+    left: 368px;
+    top: 57px;
+}
+
+#articles .container {
+    width: 1140px;
+    height: 125px;
+    padding: 90px 0;
+
+    display: inline-flex;
+}
+
+.article {
+    width: 245px;
+    margin: 0 28px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.article:first-child {
+    margin-left: 0;
+}
+
+.article:nth-child(4n) {
+    margin-right: 0;
+}
+
+.article .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+    text-transform: none;
+}
+
+.article .date {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #C6C6C6;
+}
+
+.article .description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+#articles .more {
+    position: absolute;
+    height: fit-content;
+    right: 0;
+    bottom: 0;
+    margin-top: 66px;
+
+    display: inline-flex;
+}
+
 /* clients section */
 #clients {
     position: absolute;
     width: 100%;
     height: 613px;
     left: 0;
-    top: 6825px;
+    top: 6907px;
 
     display: inline-flex;
     justify-content: center;
