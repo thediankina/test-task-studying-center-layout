@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico">
-    <title>Амипроф</title>
+    <title>Учебный центр</title>
 </head>
 <body>
     <header>
@@ -19,8 +19,8 @@
             <a href="#contacts">Контакты</a>
         </div>
         <div class="phone">
-            <div class="icon"></div>
-            <div class="number">+7&nbsp;(351)&nbsp;777-80-70</div>
+            <div id="icon" class="icon"></div>
+            <div id="number">+7&nbsp;(351)&nbsp;777-80-70</div>
             <div id="order">Заказать&nbsp;звонок</div>
             <div id="more"></div>
         </div>
@@ -100,7 +100,7 @@
         <div class="title">Проекты</div>
         <div class="container">
             <div class="project">
-                <img src="assets/project_empty.png" alt="">
+                <img src="assets/projects/empty.png" alt="">
                 <div class="preview">
                     <div class="title">Название&nbsp;проекта&nbsp;1</div>
                     <div class="description">
@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="assets/project_image.png" alt="">
+                <img src="assets/projects/full.png" alt="">
                 <div class="preview">
                     <div class="title">Название&nbsp;проекта&nbsp;2</div>
                     <div class="description">
@@ -194,7 +194,8 @@
                 <form id="request-form" action="request/create" method="post">
                     <input type="text" name="name" placeholder="Ваше имя">
                     <input type="tel" name="phone" id="phone"
-                    pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="+7 (123) 456 78 89">
+                    pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                    placeholder="+7 (123) 456 78 89">
                     <button type="submit" class="more">оставить&nbsp;заявку</button>
                 </form>
             </div>
@@ -269,15 +270,61 @@
     <div id="clients">
         <div class="title">Наши клиенты</div>
         <div class="container">
-            <img src="assets/client_1.svg" alt="">
-            <img src="assets/client_2.svg" alt="">
-            <img src="assets/client_3.svg" alt="">
-            <img src="assets/client_4.svg" alt="">
-            <img src="assets/client_3.svg" alt="">
-            <img src="assets/client_4.svg" alt="">
-            <img src="assets/client_5.svg" alt="">
-            <img src="assets/client_2.svg" alt="">
+            <img src="assets/clients/1.svg" alt="">
+            <img src="assets/clients/2.svg" alt="">
+            <img src="assets/clients/3.svg" alt="">
+            <img src="assets/clients/4.svg" alt="">
+            <img src="assets/clients/3.svg" alt="">
+            <img src="assets/clients/4.svg" alt="">
+            <img src="assets/clients/5.svg" alt="">
+            <img src="assets/clients/2.svg" alt="">
         </div>
     </div>
+    <footer>
+        <div class="container">
+            <div class="map">
+                <div class="section">
+                    <a href="#about">О нас</a>
+                    <a href="#news">Новости</a>
+                    <a href="#articles">Статьи</a>
+                    <a href="#documents">Сертификаты</a>
+                    <a href="#objects">Объекты</a>
+                    <a href="#store">Склад</a>
+                </div>
+                <div class="section">
+                    <a href="#catalog">Каталог</a>
+                    <a href="#price">Прайсы</a>
+                    <a href="#actions">Акции</a>
+                </div>
+                <div class="section">
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="section">
+                    <input type="text" name="search" id="search" 
+                    class="note" placeholder="Поиск">
+                     <div class="contacts">
+                        <a class="email" href="mailto:hello@stkrost.ru">
+                            <div id="email" class="icon"></div>hello@stkrost.ru
+                        </a>
+                        <a class="call" href="tel:+7 (351) 700-07-71">
+                            <div id="call" class="icon"></div>+7&nbsp;(351)&nbsp;700-07-71
+                        </a>
+                    </div>
+                     <div class="contacts">
+                        <a class="location" href="https://goo.gl/maps/bpgLU9CehJyKpiQX9">
+                            <div id="location" class="icon"></div>г.&nbsp;Челябинск
+                        </a>
+                        <button class="callback">Обратный&nbsp;звонок</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="note description">
+                    © 2020 Universe, Все права защищены
+                </div>
+                <a href="https://intecweb.ru/"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
