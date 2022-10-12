@@ -2,13 +2,11 @@
 
 /* general styles */
 body {
-    width: 100%;
-    height: 100%;
-
     margin: 0;
-    padding: 0;
-
     background-color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -30,7 +28,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
 
     color: #000000;
 }
@@ -72,29 +70,26 @@ footer .note {
 /* header section */
 header {
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 105px;
-    z-index: 1;
-}
+    margin: 0 15%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-header > div {
-    position: absolute;
+    z-index: 1;
 }
 
 .logo {
     width: 192px;
     height: 75px;
-    left: 360px;
-    top: 17px;
 
     background: url(assets/logo.svg);
 }
 
 header > .navbar {
-    width: 685px;
-    height: 21px;
-    left: 617px;
-    top: 44px;
+    width: 50%;
 
     display: inline-flex;
     justify-content: space-between;
@@ -102,7 +97,6 @@ header > .navbar {
 
 header > .navbar > a {
     font-family: 'Montserrat', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
@@ -114,8 +108,6 @@ header > .navbar > a {
 .phone {
     width: 191px;
     height: 42px;
-    left: 1369px;
-    top: 35px;
 
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -138,7 +130,8 @@ header > .navbar > a {
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-
+    
+    white-space: nowrap;
     color: #2D2D2D;
 }
 
@@ -168,31 +161,31 @@ header > .navbar > a {
 
 /* about section */
 #about {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 687px;
+    height: 680px;
 }
 
 #about > div {
     position: absolute;
-    z-index: 0;
 }
 
 #about > .background {
-    width: inherit;
+    width: 70%;
     height: inherit;
+    padding: 0 15%;
 
     background: #DC911B;
     opacity: 0.3;
 }
 
 #about > .image {
-    width: 974px;
+    width: 60%;
     height: 606px;
-    left: 755px;
-    top: 81px;
+    right: 0;
+    bottom: 0;
 
-    background: url(assets/banner.png);
+    background: url(assets/banner.png) no-repeat;
     mix-blend-mode: multiply;
 }
 
@@ -207,7 +200,7 @@ header > .navbar > a {
 .banner {
     width: 448px;
     height: 144px;
-    left: 360px;
+    left: 15%;
     top: 284px;
 
     font-size: 32px;
@@ -218,46 +211,60 @@ header > .navbar > a {
 
 /* services section */
 #services {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 2054px;
-    top: 687px;
-}
-
-#services > div {
-    position: absolute;
 }
 
 #services > .title {
-    width: 259px;
-    height: 43px;
-    left: 831px;
-    top: 100px;
+    width: 100%;
+    padding: 5% 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     color: #000000;
 }
 
-#services > .container {
-    width: 975px;
-    height: 1462px;
-    top: 273px;
-
-    padding: 75px 462px 244px 483px;
-    background: url(assets/services.svg) no-repeat;
+#services .container {
+    width: 60%;
+    height: 100%;
+    padding: 0 20%;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 212px);
-    grid-row-gap: 200px;
+    grid-row-gap: 12%;
+}
+
+#services .background {
+    position: relative;
+    width: 100%;
+
+    display: inline-block;
+}
+
+#services img {
+    width: 100%;
+}
+
+#services img + .container {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .service {
-    width: 575px;
+    width: 60%;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 32px;
+    grid-row-gap: 15%;
+}
+
+.service:first-child {
+    padding-top: 5%;
 }
 
 .service > .title {
@@ -305,19 +312,19 @@ header > .navbar > a {
 
 /* reviews & documents section */
 #reviews {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 80%;
     height: 758px;
-    top: 2741px;
+    padding: 0 10%;
 
     background: #3E3E3D;
 }
 
 #documents {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 80%;
     height: 758px;
-    top: 6137px;
+    padding: 0 10%;
 
     background: #3E3E3D;
 }
@@ -329,8 +336,12 @@ header > .navbar > a {
 
 #reviews > .title,
 #documents > .title {
-    left: 564px;
-    top: 125px;
+    width: 50%;
+    height: 290px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     color: #FFFFFF;
 }
@@ -338,49 +349,54 @@ header > .navbar > a {
 #reviews > .image {
     width: 577px;
     height: 535px;
-    left: 1053px;
+    left: 55%;
     top: 82px;
 
-    background: url(assets/reviews.svg) no-repeat;
+    background: url(assets/reviews.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #documents > .image {
     width: 486px;
     height: 500px;
-    left: 1191px;
-    top: 117px;
+    left: 63%;
+    top: 162px;
 
-    background: url(assets/documents.svg) no-repeat;
+    background-image: url(assets/documents.svg);
+    background-repeat: no-repeat;
 }
 
 #reviews > .container,
 #documents > .container {
-    width: 820px;
-    height: 416px;
-    left: 276px;
-    top: 274px;
+    width: 50%;
+    height: 434px;
+    padding-top: 250px;
 }
 
 .slider {
     position: absolute;
-    width: inherit;
+    width: 100%;
     height: 338px;
+    padding-bottom: 93px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .review, .document {
     width: 240px;
     height: inherit;
 
-    background: url(assets/review.png) no-repeat;
+    background-image: url(assets/review.png);
+    background-repeat: no-repeat;
 }
 
-.navbar {
+#reviews .navbar,
+#documents .navbar {
     position: absolute;
     width: 100%;
-    top: 378px;
+    bottom: 0;
 
     display: inline-flex;
     justify-content: center;
@@ -402,13 +418,10 @@ header > .navbar > a {
 #documents .more,
 .new .title {
     position: absolute;
-    width: 132px;
-    height: 22px;
-    right: 24px;
+    right: 15%;
     bottom: 0;
 
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 120%;
@@ -421,10 +434,12 @@ header > .navbar > a {
 
 /* projects section */
 #projects {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 1140px;
-    top: 3499px;
+    
+    display: flex;
+    justify-content: center;
 }
 
 #projects > div {
@@ -432,23 +447,20 @@ header > .navbar > a {
 }
 
 #projects > .title {
-    width: 171px;
-    height: 43px;
-    left: 462px;
-    top: 76px;
+    top: 8%;
 }
 
 #projects .container {
-    left: 422px;
-    top: 218px;
+    top: 8%;
+
+    display: grid;
+    grid-row-gap: 100px;
 }
 
 .project {
     position: relative;
     width: 1050px;
     height: 312px;
-    margin-top: 105px;
-    padding: 0 20px;
 }
 
 .project:first-child {
@@ -495,17 +507,15 @@ header > .navbar > a {
 }
 
 #projects .more {
-    position: absolute;
-    right: -5px;
-    margin-top: 92px;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 /* news section */
 #news {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 471px;
-    top: 4639px;
 }
 
 #news > div {
@@ -587,10 +597,9 @@ header > .navbar > a {
 
 /* contacts section */
 #contacts {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 540px;
-    top: 5110px;
 }
 
 #contacts > div {
@@ -598,17 +607,20 @@ header > .navbar > a {
 }
 
 #contacts > .background {
-    width: 1920px;
+    width: 100%;
     height: 312px;
     top: 133px;
-    padding: 40px 0;
+    padding-top: 80px;
 
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background: url(assets/contacts.svg) no-repeat;
+    background-image: url(assets/contacts.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #contacts .container {
@@ -670,10 +682,9 @@ header > .navbar > a {
 
 /* articles section */
 #articles {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 487px;
-    top: 5650px;
 
     display: flex;
     flex-direction: column;
@@ -687,8 +698,8 @@ header > .navbar > a {
 }
 
 #articles > .title {
-    left: 368px;
-    top: 57px;
+    left: 25%;
+    top: 12%;
 }
 
 #articles .container {
@@ -755,10 +766,9 @@ header > .navbar > a {
 
 /* clients section */
 #clients {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 613px;
-    top: 6895px;
 
     display: inline-flex;
     justify-content: center;
@@ -769,8 +779,8 @@ header > .navbar > a {
 }
 
 #clients > .title {
-    left: 565px;
-    top: 57px;
+    left: 25%;
+    top: 10%;
 }
 
 #clients > .container {
@@ -793,19 +803,20 @@ header > .navbar > a {
 
 /* footer section */
 footer {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 387px;
-    top: 7508px;
+    height: 400px;
+
+    display: inline-flex;
+    justify-content: center;
 
     background: #3E3E3D;
 }
 
 footer > .container {
-    position: absolute;
-    width: 1200px;
+    width: 100%;
     height: 383px;
-    padding: 0 360px;
+    padding: 0 15%;
 }
 
 .map {
