@@ -58,6 +58,28 @@ body {
     margin-left: 10px;
 }
 
+.button {
+    width: 42px;
+    height: 42px;
+    padding: 11px 17px 13px 15px;
+
+    justify-self: end;
+    color: transparent;
+
+    cursor: pointer;
+    background-image: url(assets/all.svg);
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #DC911B;
+}
+
+.button:hover {
+    background-image: url(assets/more.svg);
+    background-color: #DC911B;
+    border: none;
+}
+
 footer .note {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -233,8 +255,8 @@ header > .navbar > a {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 212px);
-    grid-row-gap: 12%;
+    grid-template-rows: repeat(4, 10%);
+    grid-row-gap: 14%;
 }
 
 #services .background {
@@ -494,18 +516,6 @@ header > .navbar > a {
     align-items: center;
 }
 
-.project button {
-    width: 42px;
-    height: 42px;
-    padding: 11px 15px 13px 17px;
-
-    justify-self: end;
-
-    cursor: pointer;
-    background: #DC911B;
-    border: none;
-}
-
 #projects .more {
     margin-right: 0;
     margin-left: auto;
@@ -515,25 +525,29 @@ header > .navbar > a {
 #news {
     position: relative;
     width: 100%;
-    height: 471px;
-}
-
-#news > div {
-    position: absolute;
-}
-
-#news > .container {
-    width: 975px;
-    height: inherit;
-    left: 0;
-    margin-left: 31%;
+    height: 470px;
 
     display: inline-flex;
 }
 
-#news > .background {
-    width: 48%;
+#news > .container {
+    position: relative;
+    width: 60%;
     height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto min-content;
+    grid-template-areas:
+        "new new new"
+        ". . more";
+}
+
+#news > .background {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    padding-left: 10%;
 
     display: flex;
     flex-direction: column-reverse;
@@ -556,14 +570,13 @@ header > .navbar > a {
 
 .new {
     position: relative;
-    width: 345px;
     height: 250px;
-    top: 23%;
     padding: 0 45px;
 
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    align-self: center;
 }
 
 .new .title {
@@ -574,25 +587,30 @@ header > .navbar > a {
 }
 
 .new button {
-    width: 42px;
-    height: 42px;
-    padding: 11px 15px 13px 17px;
-
-    cursor: pointer;
-    background: #DC911B;
-    border: none;
+    justify-self: start;
 }
 
-.new:nth-last-child(3n-1) {
+.new:first-child {
+    padding: 98px 45px;
+    background-color: #EDEEEF;
+}
+
+.new:nth-last-child(4n-1) {
     border-left: 1px solid #B1B1B0;
 }
 
-#news .more {
-    position: absolute;
-    right: 8.2%;
-    bottom: 12%;
+#news .fill {
+    padding: 10px;
+    background-color: #EDEEEF;
+}
 
-    display: inline-flex;
+#news .more {
+    grid-area: more;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* contacts section */
@@ -624,7 +642,8 @@ header > .navbar > a {
 }
 
 #contacts .container {
-    width: 617px;
+    width: fit-content;
+    padding-right: 50px;
 
     display: flex;
     flex-direction: column;
